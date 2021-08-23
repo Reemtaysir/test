@@ -1,5 +1,7 @@
 package com.ensat.entities;
 
+import org.hibernate.mapping.Collection;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -34,7 +36,7 @@ public class Employee {
                     name = "employee_id" ,referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(
                     name = "role_id" ,referencedColumnName = "id"))
-    private Collection<Role>roles;
+    private Collection<Role> roles;
 
     public Employee() {
     }
